@@ -19,13 +19,13 @@ def ask_sandwich_construction():
     protein_type = pyip.inputChoice(PROTEIN_TYPES)
 
     cheese_type = None
-    if pyip.inputYesNo("Would you like cheese (y/n)?- "):
+    if pyip.inputYesNo("Would you like cheese (y/n)?- ") == "yes":
         cheese_type = pyip.inputChoice(CHEESE_TYPES)
     
     toppings = []
 
     for topping in EXTRA_TOPPINGS:
-        if pyip.inputYesNo(f"Would you like {topping} on your sandwich?- ") == "yes":
+        if pyip.inputYesNo(f"Would you like {topping} on your sandwich (y/n)?- ") == "yes":
             toppings.append(topping)
     
     sandwich = {
