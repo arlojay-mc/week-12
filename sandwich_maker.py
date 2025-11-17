@@ -52,8 +52,11 @@ def print_sandwich(sandwich):
     else:
         print(", " + cheese.lower() + " cheese,", end="")
     
-    print(" with the toppings ", end="")
-    print(*toppings, sep=", ", end=".\n")
+    if len(toppings) == 0:
+        print(" and no toppings.")
+    else:
+        print(" and the toppings ", end="")
+        print(*toppings, sep=", ", end=".\n")
 
 
 def main():
