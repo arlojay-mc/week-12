@@ -29,7 +29,7 @@ def inputs():  											# collect info needed from the user.
     book_prices = {}  									# create list to save prices
     for index in range(num_books):  					# for loop runs user-specified number of times & collects info on each book
         book_title = pyip.inputStr(f'Enter the title of book #{index +1}: ').lower()
-        book_cost = pyip.inputInt(f'Enter the cost, to the nearest dollar: ', min=0)  						# call validation function to collect int > 0
+        book_cost = pyip.inputFloat(f'Enter the cost (in dollars): ', min=0)  						# call validation function to collect int > 0
         book_prices[book_title] = book_cost # build price map
     return num_books, book_prices
 
