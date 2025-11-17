@@ -11,7 +11,7 @@ PROTEIN_TYPES = [ "chicken", "turkey", "ham", "roast beef" ]
 CHEESE_TYPES = [ "provolone", "swiss", "cheddar", "mozzarella" ]
 EXTRA_TOPPINGS = [ "mayo", "mustard", "lettuce", "tomato" ]
 
-def build_sandwich():
+def ask_sandwich_construction():
     print("What type of bread?")
     bread_type = pyip.inputChoice(BREAD_TYPES)
 
@@ -62,7 +62,7 @@ def main():
 
     for i in range(sandwich_count):
         print(f"=== Sandwich #{i + 1} ===")
-        sandwich = build_sandwich()
+        sandwich = ask_sandwich_construction()
         sandwiches.append(sandwich)
 
         print("Here's your sandwich:")
